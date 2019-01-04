@@ -9,20 +9,20 @@ const { StringType, NumberType } = Schema.Types;
 const Form = SchemaForm([
   {
     key: 'username',
-    type: StringType().isRequired('用户名不能为空'),
-    label: '用户名'
+    type: StringType().isRequired('This field is required'),
+    label: 'Username'
   },
   {
     key: 'email',
-    type: StringType().isEmail('邮箱格式错误'),
-    label: '邮箱'
+    type: StringType().isEmail('Please enter a valid email address'),
+    label: 'Email'
   },
   {
     key: 'age',
-    type: NumberType('年龄必须是数字'),
+    type: NumberType('Please enter a valid number'),
     componentClass: InputNumber,
     autoComplete: 'off',
-    label: '年龄'
+    label: 'Age'
   },
   {
     key: 'group',
@@ -31,8 +31,8 @@ const Form = SchemaForm([
     style: {
       width: 300
     },
-    data: [{ value: 1, label: '管理员' }, { value: 2, label: '用户' }],
-    label: '用户组'
+    data: [{ value: 1, label: 'Admin' }, { value: 2, label: 'User' }],
+    label: 'User Group'
   }
 ]);
 
