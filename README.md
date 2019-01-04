@@ -5,13 +5,13 @@ Form generation and validation based on `schema-typed` and `rsiute`.
 ## Installation
 
 ```
-npm install schema-form --save
+npm install @rsuite/schema-form --save
 ```
 
 ## Usage
 
 ```js
-import SchemaForm from 'schema-form';
+import SchemaForm from '@rsuite/schema-form';
 import { InputNumber, SelectPicker, Schema } from 'rsuite';
 
 const { StringType, NumberType } = Schema.Types;

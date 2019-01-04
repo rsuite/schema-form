@@ -1,7 +1,7 @@
 {
-  "name": "schema-form",
-  "version": "1.0.0",
-  "description": "Form generation and validation based on schema-typed and rsiute.",
+  "name": "@rsuite/schema-form",
+  "version": "0.0.1",
+  "description": "Form generation and validation based on schema-typed and rsiute",
   "main": "lib",
   "scripts": {
     "dev": "NODE_ENV=development webpack-dev-server  --inline --progress --colors --port 3100 --host 0.0.0.0 ",
@@ -15,6 +15,11 @@
     "type": "git",
     "url": "git+https://github.com/rsuite/schema-form.git"
   },
+  "files": [
+    "CHANGELOG.md",
+    "lib",
+    "src"
+  ],
   "keywords": [
     "form",
     "schema"
