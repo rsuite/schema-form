@@ -1,0 +1,61 @@
+{
+  "name": "schema-form",
+  "version": "1.0.0",
+  "description": "Form generation and validation based on schema-typed and rsiute.",
+  "main": "lib",
+  "scripts": {
+    "dev": "NODE_ENV=development webpack-dev-server  --inline --progress --colors --port 3100 --host 0.0.0.0 ",
+    "build": "rm -rf lib && babel src --out-dir lib ",
+    "docs": "rm -rf assets &&  NODE_ENV=production webpack",
+    "publish-docs": "node docs/gh-pages.js",
+    "lint": "eslint src  *.js",
+    "test": "npm run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rsuite/schema-form.git"
+  },
+  "keywords": [
+    "form",
+    "schema"
+  ],
+  "author": "simonguo.2009@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rsuite/schema-form/issues"
+  },
+  "homepage": "https://github.com/rsuite/schema-form#readme",
+  "peerDependencies": {
+    "rsuite": "^3.5.2"
+  },
+  "devDependencies": {
+    "babel-core": "^6.7.6",
+    "babel-eslint": "^6.1.2",
+    "babel-loader": "^6.2.4",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "css-loader": "^2.1.0",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^15.0.1",
+    "eslint-plugin-babel": "^4.1.1",
+    "eslint-plugin-flowtype": "^2.41.0",
+    "eslint-plugin-import": "^2.6.1",
+    "eslint-plugin-json": "^1.2.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.10.0",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "html-webpack-plugin": "^2.29.0",
+    "less": "^3.9.0",
+    "less-loader": "^4.0.5",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "react-hot-loader": "^3.1.3",
+    "rsuite": "^3.5.2",
+    "style-loader": "^0.18.2",
+    "url-loader": "^0.5.9",
+    "webpack": "^3.0.0",
+    "webpack-dev-server": "^2.3.0"
+  }
+}
