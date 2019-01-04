@@ -25,7 +25,8 @@ const Form = SchemaForm([
   {
     key: 'email',
     type: StringType().isEmail('Please enter a valid email address'),
-    label: 'Email'
+    label: 'Email',
+    helpBlock: 'Please enter your company email address'
   },
   {
     key: 'age',
