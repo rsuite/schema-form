@@ -19,27 +19,30 @@ const { StringType, NumberType } = Schema.Types;
 const Form = SchemaForm([
   {
     key: 'username',
-    type: StringType().isRequired('用户名不能为空'),
-    label: '用户名'
+    type: StringType().isRequired('This field is required'),
+    label: 'Username'
   },
   {
     key: 'email',
-    type: StringType().isEmail('邮箱格式错误'),
-    label: '邮箱'
+    type: StringType().isEmail('Please enter a valid email address'),
+    label: 'Email'
   },
   {
     key: 'age',
-    type: NumberType('年龄必须是数字'),
+    type: NumberType('Please enter a valid number'),
     componentClass: InputNumber,
     autoComplete: 'off',
-    label: '年龄'
+    label: 'Age'
   },
   {
     key: 'group',
-    type: NumberType().isRequired('用户组必须'),
+    type: NumberType(),
     componentClass: SelectPicker,
-    data: [{ value: 1, label: '管理员' }, { value: 2, label: '用户' }],
-    label: '用户组'
+    style: {
+      width: 300
+    },
+    data: [{ value: 1, label: 'Admin' }, { value: 2, label: 'User' }],
+    label: 'User Group'
   }
 ]);
 
@@ -47,3 +50,12 @@ ReactDOM.render(<Form />, mountNode);
 ```
 
 ![preview](preview.png)
+
+## Documentation
+
+- [Form examples](https://rsuitejs.com/en/components/form#Examples)
+- [Form props](https://rsuitejs.com/en/components/form#Props)
+
+## License
+
+MIT licensed
