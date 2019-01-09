@@ -60,10 +60,19 @@ class App extends React.Component {
   };
   render() {
     return (
-      <div className="doc-page">
-        <Form onChange={this.handleChange} ref={this.bindFormRef} />
-        <hr />
-        <Button onClick={this.handleSubmit}>保存</Button>
+      <div className="page">
+        <h1>Schema Form</h1>
+        <p>Form generation and validation based on schema-typed and rsuite</p>
+        <p>
+          <a href="https://github.com/rsuite/schema-form">
+            https://github.com/rsuite/schema-form
+          </a>
+        </p>
+        <div className="example">
+          <Form onChange={this.handleChange} ref={this.bindFormRef} />
+          <hr />
+          <Button onClick={this.handleSubmit}>保存</Button>
+        </div>
       </div>
     );
   }
