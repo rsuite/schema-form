@@ -1,4 +1,4 @@
-/*! Last update: Fri Jan 04 2019 17:09:10 GMT+0800 (CST) */
+/*! Last update: Wed Jan 09 2019 18:17:09 GMT+0800 (CST) */
 /* stylelint-disable */
 /* stylelint-disable */
 body {
@@ -18816,6 +18816,11 @@ textarea.rs-picker-menu .rs-picker-search-bar .rs-picker-search-bar-input {
 .rs-uploader-picture-text .rs-uploader-file-item-has-error .rs-uploader-file-item-status a:hover {
   text-decoration: none;
 }
-.doc-page {
-  padding: 100px;
+.page {
+  padding: 50px;
+}
+.example {
+  margin: 20px 0;
+  border: 1px solid #eee;
+  padding: 20px;
 }
