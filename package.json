@@ -1,6 +1,6 @@
 {
   "name": "@rsuite/schema-form",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Form generation and validation based on schema-typed and rsiute",
   "main": "lib",
   "scripts": {
@@ -34,6 +34,7 @@
     "rsuite": "^3.5.2"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "babel-core": "^6.7.6",
     "babel-eslint": "^6.1.2",
     "babel-loader": "^6.2.4",
