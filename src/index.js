@@ -8,7 +8,7 @@ import {
   Schema
 } from 'rsuite';
 
-export default (schema: any[]) => {
+export default function(schema = []) {
   const schemaModel = {};
   schema.forEach(item => {
     schemaModel[item.key] = item.type;
@@ -18,15 +18,20 @@ export default (schema: any[]) => {
   return React.forwardRef((props, ref) => (
     <Form ref={ref} model={model} {...props}>
       {schema.map(item => {
-        const { key, label, componentClass, helpBlock, ...rest } = item;
+        const { key, label, componentClass, helpBlock, componentProps = {} } = item;
+      
         return (
           <FormGroup key={key}>
-            <ControlLabel>{label}</ControlLabel>
-            <FormControl name={key} accepter={componentClass} {...rest} />
-            <HelpBlock>{helpBlock}</HelpBlock>
+            { label &&
+              <ControlLabel>{label}</ControlLabel>
+            }
+            <FormControl name={key} accepter={componentClass} {...componentProps} />
+            { helpBlock &&
+              <HelpBlock>{helpBlock}</HelpBlock> 
+            }
           </FormGroup>
         );
       })}
     </Form>
   ));
-};
+}

@@ -31,19 +31,23 @@ const Form = SchemaForm([
   {
     key: 'age',
     type: NumberType('Please enter a valid number'),
+    label: 'Age',
     componentClass: InputNumber,
-    autoComplete: 'off',
-    label: 'Age'
+    componentProps: {
+      autoComplete: 'off',
+    }
   },
   {
     key: 'group',
     type: NumberType(),
+    label: 'User Group',
     componentClass: SelectPicker,
-    style: {
-      width: 300
-    },
-    data: [{ value: 1, label: 'Admin' }, { value: 2, label: 'User' }],
-    label: 'User Group'
+    componentProps: {
+      style: {
+        width: 300
+      },
+      data: [{ value: 1, label: 'Admin' }, { value: 2, label: 'User' }],
+    }
   }
 ]);
 
