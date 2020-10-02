@@ -1,6 +1,6 @@
 # schema-form
 
-Form generation and validation based on `schema-typed` and `rsiute`.
+Form generation and validation based on `schema-typed` and `rsuite`.
 
 ## Installation
 
